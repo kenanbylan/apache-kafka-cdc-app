@@ -1,0 +1,15 @@
+const { MongoClient } = require("mongodb");
+
+async function run() {
+  const client = new MongoClient("mongodb://localhost:35001");
+  await client.connect();
+
+  const db = client.db("Tutorial1");
+  const ordersCollection = db.collection("orders");
+
+  // Insert a document into the "orders" collection
+  await ordersCollection.insertOne({ test: 1 });
+
+  // Close the connection
+  await client.close();
+}
