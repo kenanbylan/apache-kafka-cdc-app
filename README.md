@@ -15,6 +15,8 @@ The MongoDB Kafka tutorial environment requires the following installed on your 
 
 - [Docker](https://docs.docker.com/get-docker/)
 - [Git]()
+- [NodeJS]()
+
 
 The docker compose in this repository will create an environment that consists of the following:
 
