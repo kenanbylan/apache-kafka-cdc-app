@@ -1,12 +1,15 @@
-# MongoDB Connector for Apache Kafka Tutorials
+# MongoDB Connector for Simple CDC Application Development Project with Apache Kafka
 
-The official MongoDB Connector for Apache® Kafka® is developed and supported by MongoDB engineers and verified by Confluent. The Connector is designed to be used with Kafka Connect and enables MongoDB to be a datasource for Apache Kafka from both a source and sink perspective.
+The project is to establish a system where the message produced by one of the Consumer and Producer is consumed by the other.
 
-![](https://webassets.mongodb.com/_com_assets/cms/mongodbkafka-hblts5yy33.png)
+<br>
+
+![Screenshot 2023-06-19 at 00 24 17](https://github.com/kenanbylan/apache-kafka-cdc-app/assets/76161957/f1829e10-47c4-4937-b93f-cef57cf7d572)
+
 
 These tutorials are focused on teaching you the essential features and functionality of the connector enabling you to get up and running quickly.
 
-# Prerequisites
+# Requirement
 
 The MongoDB Kafka tutorial environment requires the following installed on your client:
 
@@ -23,30 +26,13 @@ The docker compose in this repository will create an environment that consists o
 
 # Starting the Docker environment
 
-To start the baseline tutorial environment execute the run the following command:
+Clone the repo then run the application with docker.
+note: Make sure Docker desktop is running actively.
 
 ```
-docker-compose -p mongo-kafka up -d --force-recreate
+docker-compose up
 ```
 
-To start an interactive shell, run the following command:
 
-```
-docker exec -it mongo1 /bin/bash
-```
 
-## Shutting down the Tutorial environment
 
-To stop and remove the Docker environment from your
-machine, run the following command:
-
-```
-docker-compose -p mongo-kafka down --rmi 'all'
-```
-
-## References
-
-- [MongoDB Kafka Connector](https://docs.mongodb.com/kafka-connector/current/) online documentation.
-
-- [Connectors to Kafka](https://docs.confluent.io/home/connect/overview.html)
-- MongoDB Connector for Apache Kafka Tutorials (Link TBD)
