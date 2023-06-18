@@ -119,31 +119,35 @@ services:
       - mongo1
     networks:
       - mongo-kafka_localnet
-    entrypoint: ["sh", "-c", "sleep 10 && mongosh --host mongo1:27017 config-replica.js && sleep 10"]
+    entrypoint:
+      [
+        "sh",
+        "-c",
+        "sleep 10 && mongosh --host mongo1:27017 config-replica.js && sleep 10",
+      ]
     restart: "no"
 
   consumer:
-    image: mongokafka-consumer
-    container_name: consumer
-    build:
-      context: .
-      dockerfile: consumer.Dockerfile
-    depends_on:
-      - mongo1
-    networks:
-      - mongo-kafka_localnet
+      container_name: consumer
+      build:
+        context: .
+        dockerfile: consumer.Dockerfile
+      depends_on:
+        - mongo1
+      networks:
+        - mongo-kafka_localnet
+      restart: "no"
 
   producer:
-    image: mongokafka-producer
-    container_name: producer
-    build:
-      context: .
-      dockerfile: producer.Dockerfile
-    depends_on:
-      - mongo1
-      - consumer
-    networks:
-      - mongo-kafka_localnet
+      container_name: producer
+      build:
+        context: .
+        dockerfile: producer.Dockerfile
+      depends_on:
+        - mongo1
+      networks:
+        - mongo-kafka_localnet
+      restart: "no"
 
 networks:
   mongo-kafka_localnet:

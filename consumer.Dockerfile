@@ -1,14 +1,17 @@
+# Base image
 FROM node:18-alpine
 
+# Set working directory
 WORKDIR /app
 
-COPY package.json /app/package.json
-COPY package-lock.json /app/package-lock.json
+# Copy package.json and package-lock.json
+COPY package.json package-lock.json ./
 
+# Install dependencies
 RUN npm ci
 
-COPY src/consumer.js /app/consumer.js
+# Copy consumer.js
+COPY src/consumer.js ./
 
-CMD [ "node", "consumer.js" ]
-
- 
+# Set the command to run
+CMD ["node", "consumer.js"]
