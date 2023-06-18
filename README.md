@@ -4,8 +4,8 @@ The project is to establish a system where the message produced by one of the Co
 
 <br>
 
-![Screenshot 2023-06-19 at 00 24 17](https://github.com/kenanbylan/apache-kafka-cdc-app/assets/76161957/f1829e10-47c4-4937-b93f-cef57cf7d572)
 
+<img src= "https://github.com/kenanbylan/apache-kafka-cdc-app/assets/76161957/13796c86-0659-46f1-822e-97a25555f6cf" />
 
 These tutorials are focused on teaching you the essential features and functionality of the connector enabling you to get up and running quickly.
 
