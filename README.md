@@ -35,6 +35,16 @@ note: Make sure Docker desktop is running actively.
 docker-compose up
 ```
 
+# Usage 
+
+After compose
+Open 2 different terminals, then run the
+``` node consumer.js ``` file in one terminal, then ``` node producer.js ``` in the other terminal you opened.
+run the command.
+
+- You can see the log output from the terminal.
+
+
 
 
 
