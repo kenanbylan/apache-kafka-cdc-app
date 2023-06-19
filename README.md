@@ -44,7 +44,17 @@ run the command.
 
 - You can see the log output from the terminal.
 
+# Docker images
+
+- producer.js
+```
+docker pull kenanbylan/apache-kafka-cdc-producer
+```
 
 
+- consumer.js
+```
+docker pull kenanbylan/apache-kafka-cdc-consumer
+```
 
 
