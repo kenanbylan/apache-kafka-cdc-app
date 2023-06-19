@@ -114,6 +114,10 @@ services:
 
   mongo1-setup:
     image: "mongodb-kafka-base-setup-mongod:1.0"
+    build:
+      context: .
+      dockerfile: mongo.Dockerfile
+
     container_name: mongo1-setup
     depends_on:
       - mongo1
@@ -127,6 +131,7 @@ services:
       ]
     restart: "no"
 
+  
   consumer:
       container_name: consumer
       build:
@@ -152,3 +157,5 @@ services:
 networks:
   mongo-kafka_localnet:
     attachable: true
+
+
